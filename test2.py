@@ -19,18 +19,18 @@ def main():
 
     data_keys = []
     try:
-        with open('words2.txt', "r") as f:
+        with open('words.txt', "r") as f:
             for line in f:
                 data_keys.extend(line.split())
     except FileNotFoundError:
-        print("Файлът words2.txt не беше намерен.")
+        print("Файлът words.txt не беше намерен.")
         return
     except Exception as e:
         print(f"Грешка при четене на файла: {e}")
         return
 
     if not data_keys:
-        print("Файлът words2.txt е празен.")
+        print("Файлът words.txt е празен.")
         return
 
     print(f"Намерени ключови думи: {len(data_keys)}")
@@ -60,3 +60,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    input ()
